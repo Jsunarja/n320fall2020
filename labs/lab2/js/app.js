@@ -6,6 +6,15 @@ class Instrument {
 	}
 
 	playing() {
+		console.log(
+			this.family +
+				" is " +
+				this.play +
+				" at " +
+				this.loudness +
+				" decibels." +
+				"<br>"
+		);
 		document.write(
 			this.family +
 				" is " +
