@@ -1,5 +1,15 @@
 <html>
 	<body>
+		<link rel="stylesheet" href="css/styles.css" />
+		<template id="iitem">
+			<div class="inventory-item">
+				<div class="name">{{ name }}</div>
+				<img class="igraphic" src="{{ graphicSource }}" />
+			</div>
+		</template>
+		<div id="petDiv"></div>
+		<button onclick="feedPet()">Feed Pet</button>
+
 		<script src="js/app.js"></script>
 	</body>
 </html>
