@@ -1,0 +1,9 @@
+svg {
+	width: 800px;
+	height: 800px;
+	border-style: solid;
+}
+rect {
+	width: 100px;
+	height: 100px;
+}
