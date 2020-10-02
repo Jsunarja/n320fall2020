@@ -1,9 +1,17 @@
-svg {
-	width: 800px;
-	height: 800px;
-	border-style: solid;
+.board {
+	width: 165px;
+	height: 165px;
+	fill: white;
+	stroke: black;
+	stroke-width: 10px;
 }
-rect {
-	width: 100px;
-	height: 100px;
+.ooos {
+	fill: blue;
+	display: none;
+}
+
+.exes {
+	stroke: red;
+	stroke-width: 10px;
+	/*display: none;*/
 }
