@@ -28,7 +28,7 @@ let navItems = document.getElementsByClassName("navitem");
 
 for (let i = 0; i < navItems.length; i++) {
 	TweenLite.from(navItems[i], {
-		duration: i * 0.4,
+		duration: i * 0.8,
 		x: -100,
 		alpha: 0,
 		delay: i * 0.4,
