@@ -7,7 +7,6 @@
 					v-for="book in books"
 					v-bind:book="book"
 					vbind:key="book.id"
-					v-if="display"
 				></book-view>
 			</ul>
 			<button v-on:click="bookDisplay">Show/Hide Second Book</button>

@@ -3,6 +3,27 @@ Vue.component("coffee-view", {
 	template: "<li>{{ coffee.name }} : ${{ coffee.price }}</li>",
 });
 
+Vue.component("clock-view", {
+	data: function () {
+		return {
+			hour: 12,
+		};
+	},
+	template: "<div>It is <input v-model='hour'/> {{ hour }} 'Oclock<div>",
+});
+
+Vue.component("meal-view", {
+	props: ["time"],
+	data: function () {
+		return {
+			breakfast: "Eggs",
+			lunch: "Burger",
+			dinner: "Steak",
+		};
+	},
+	template: "<div>{{time}}</div></div>",
+});
+
 let app = new Vue({
 	el: "#app",
 	data: {
@@ -19,5 +40,13 @@ let app = new Vue({
 		buyCoffee: function () {
 			this.purchases += 1;
 		},
+	},
+});
+
+let clock = new Vue({
+	el: "#clockBody",
+	data: {
+		clockMessage: "What time is it?",
+		hour: "whatever",
 	},
 });

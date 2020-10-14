@@ -1,6 +1,7 @@
 Vue.component("book-view", {
 	props: ["book"],
-	template: "<li>{{book.cover}} {{book.title}} by {{book.author}} ",
+	template:
+		"<li v-if='book.id !=2' >{{book.cover}} {{book.title}} by {{book.author}} ",
 });
 
 let app = new Vue({
@@ -22,32 +23,26 @@ let app = new Vue({
 				author: "Ray Bradbury",
 			},
 			{
-				id: 2,
+				id: 3,
 				cover: "📓",
 				title: "Harry Potter and the Philosopher's Stone",
 				author: "J. K. Rowling",
 			},
 			{
-				id: 3,
+				id: 4,
 				cover: "📓",
-				title: "The Hunger Games",
+				title: "Hunger Games",
 				author: "Suzanne Collins",
 			},
 		],
 	},
 	methods: {
 		bookDisplay: function () {
-			console.log(this.books[1]);
-			/*var secondBook = this.books[1];
-			if (this.display != false) {
-				this.display = false;
-				secondBook.show = false;
-				console.log(secondBook.show);
+			if (this.books[1].id != 2) {
+				this.books[1].id = 2;
 			} else {
-				this.display = true;
-				secondBook.show = true;
-				console.log(secondBook.show);
-			}*/
+				this.books[1].id = 1;
+			}
 		},
 	},
 });
