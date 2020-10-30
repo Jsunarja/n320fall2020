@@ -1,7 +1,10 @@
 <html>
     <body>
-        <div id="app"></div>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <div id="app">
+            <DataDisplay v-for="player in players"
+            v-bind:players="players"
+            v-bind:key="player.name"/>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/app.js"></script>
     </body>
